@@ -136,11 +136,13 @@ section {
     font-size: 1.2rem;
 }
 
-.container form main .input-group .field .icon #phidden {
+.container form main .input-group .field .icon #phidden,
+.container form main .input-group .field .icon #confirm-phidden {
     display: none;
 }
 
-.container form main .input-group .field .icon #pshow {
+.container form main .input-group .field .icon #pshow,
+.container form main .input-group .field .icon #confirm-pshow {
     display: block;
     width: 100%;
     height: 100%;
@@ -265,4 +267,85 @@ section {
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--fourth-color);
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        flex-direction: column-reverse;
+    }
+
+    .container .image {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        top: 0;
+    }
+
+    .container .image img {
+        width: 45%;
+    }
+
+    .container form {
+        width: 100%;
+        height: 50%;
+    }
+
+    .container form header {
+        width: 70%;
+    }
+
+    .container form main {
+        width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container .image img {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+
+    .container .image {
+        display: none;
+    }
+
+    .container form {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        border-radius: 0;
+    }
+
+    .container form header {
+        width: 100%;
+    }
+
+    .container form main {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .container form main .input-group .field input {
+        font-size: 0.9rem;
+        padding: 0.6rem 2.3rem;
+    }
+
+    .container form main .input-group .field {
+        height: 2.5rem;
+    }
+
+    .container form main .btns .register button {
+        height: 2.5rem !important;
+        font-size: 0.9rem !important;
+    }
 }
